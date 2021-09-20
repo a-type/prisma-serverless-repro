@@ -1,0 +1,23 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "rhel-openssl-1.0.x"]
+}
+
+// below, account models, which correspond to the needs of
+// NextAuth v4 (https://next-auth.js.org/adapters/prisma)
+
+// A User represents a unique person who is using the app.
+model Foo {
+  id   String @id @default(cuid())
+  name String
+
+  @@map(name: "users")
+}

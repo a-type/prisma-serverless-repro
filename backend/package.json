@@ -1,0 +1,33 @@
+{
+  "name": "prisma-serverless-repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Grant Forrest",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "prisma generate --schema ./prisma/schema.prisma && prisma db push && sls dynamodb install",
+    "dev": "sls offline start --noPrependStageInUrl"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^8.2.0",
+    "@graphql-tools/utils": "^8.2.2",
+    "@prisma/client": "^3.0.2",
+    "apollo-server-lambda": "^3.3.0",
+    "aws-lambda-graphql": "^1.0.0-alpha.23",
+    "aws-sdk": "^2.991.0",
+    "graphql": "^15.5.3",
+    "graphql-subscriptions": "^1.2.1"
+  },
+  "devDependencies": {
+    "prisma": "3.0.2",
+    "serverless-bundle": "^5.0.2",
+    "serverless-dotenv-plugin": "^3.9.0",
+    "serverless-dynamodb-local": "^0.2.40",
+    "serverless-lift": "^1.9.0",
+    "serverless-offline": "^8.2.0",
+    "serverless-plugin-monorepo": "^0.10.0",
+    "serverless-plugin-offline-dynamodb-stream": "^1.0.20",
+    "serverless-plugin-typescript": "^2.0.0",
+    "typescript": "^4.4.3"
+  }
+}

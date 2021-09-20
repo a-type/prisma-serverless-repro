@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "outDir": ".build",
+    "rootDir": "./",
+    "strict": true,
+    "lib": ["es2015"],
+    "moduleResolution": "node",
+    "target": "es5",
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
+}
