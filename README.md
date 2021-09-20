@@ -2,6 +2,8 @@ Reproduction setup:
 
 Have Java JRE installed before running `yarn install`.
 
+You might also need AWS credentials available in your environment, via env vars or a default profile. This example doesn't deploy anything but I think Serverless likes to have them available.
+
 Postinstall script will install local Dynamodb and setup Prisma.
 
 Create the database:
