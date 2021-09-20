@@ -15,6 +15,6 @@ GRANT ALL PRIVILEGES ON DATABASE foo TO foo;
 ALTER ROLE "foo" WITH LOGIN CREATEDB;
 ```
 
-Run `yarn install` and `yarn dev` in `/.backend` to run the Serverless backend.
+Run `yarn install` and `yarn dev` in `./backend` to run the Serverless backend.
 
 Run `yarn install` `yarn dev` in `./app` to run client.
